@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Endless Words</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="page home-page">
+        <h1 class="main">Player Name</h1>
+        <input
+          type="text"
+          name="player"
+          id="name"
+          placeholder="Your Name Here..."
+        />
+        <p>
+          <button class="btn" id="btn-go" type="button">
+            Go
+          </button>
+        </p>
+      </div>
+      <div class="page game-page">
+        <div class="row">
+          <div class="top-info">
+            <div class="left player"></div>
+            <div class="right">
+              Lvl:<span class="level"></span> &nbsp; Score:<span
+                class="scores"
+              ></span>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <h2 class="challenge">Challenge #<span class="qno"></span></h2>
+          <table class="word-holder">
+            <tr></tr>
+          </table>
+
+          <button class="btn" id="btn-validate" type="button">
+            Validate
+          </button>
+          <div class="div-hints">
+            <h3>
+              Hints
+            </h3>
+            <ul class="hints"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page summary-page">
+      <h1>Final Scores</h1>
+      <h2>Player Name: <span class="player"></span></h2>
+      <table class="scores-table">
+        <tr>
+          <th>level</th>
+          <th>Questions</th>
+          <th>Scores</th>
+        </tr>
+        <tbody class="scores-data"></tbody>
+      </table>
+      <h3 class="grand-total">Grand Total: <span class="gtot"></span></h3>
+      <button class="btn" id="btn-play" type="button">
+        Play Again
+      </button>
+    </div>
+    <div class="page level-page">
+      <h1>Hurray!! Level <span class="prevlevel"></span> Completed</h1>
+      <h2>Proceed to level <span class="nextlevel"></span></h2>
+      <p>
+        <button class="btn" id="btn-next" type="button">
+          Next
+        </button>
+      </p>
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="data/config.js"></script>
+    <script type="text/javascript" src="data/wordbank.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/utilityFunctions.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/handlers.js"></script>
+    <script type="text/javascript" src="js/pages/index.js"></script>
+    <script type="text/javascript" src="js/pages/homepage.js"></script>
+    <script type="text/javascript" src="js/pages/gamepage.js"></script>
+    <script type="text/javascript" src="js/pages/levelpage.js"></script>
+    <script type="text/javascript" src="js/pages/summarypage.js"></script>
+  </body>
+</html>

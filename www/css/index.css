@@ -1,0 +1,271 @@
+* {
+  -webkit-tap-highlight-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+  /* background-color: #e4e4e4; */
+  background: linear-gradient(#ce5f1e, #a7813b);
+  font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI",
+    "Roboto", sans-serif;
+  font-size: 12px;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  /* Padding to avoid the "unsafe" areas behind notches in the screen */
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* Portrait layout (default) */
+.app {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1%;
+  text-align: center;
+  background: url(../img/logo.png) no-repeat center;
+  background-size: 130px;
+  height: 147px;
+}
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+  .app {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px;
+  overflow: visible;
+  padding: 0px;
+  text-align: center;
+}
+
+.event {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  margin: 0px 30px;
+  padding: 2px 0px;
+}
+
+.event.listening {
+  background-color: #333333;
+  display: block;
+}
+
+.event.received {
+  background-color: #4b946a;
+  display: none;
+}
+
+.error {
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: fade 3000ms infinite;
+  -webkit-animation: fade 3000ms infinite;
+}
+
+/* Custom css starts here */
+.word-holder {
+  width: 100%;
+  margin-top: 10px;
+}
+.word-holder td {
+  border: 1px solid #222;
+  font-size: 46px;
+  color: #222;
+}
+
+.top-info {
+  font-weight: bold;
+  color: #222;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+h1.main {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px;
+  overflow: visible;
+  padding: 0px;
+  text-align: center;
+  margin-top: 209px;
+}
+
+input[type="text"] {
+  height: 46px;
+  padding: 3px;
+  color: #4e4949;
+  border-radius: 15px;
+  outline: none;
+  text-decoration: none;
+  width: 94%;
+  margin: 10px auto;
+  display: inline-block;
+  font-size: 2em;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.8em !important;
+  min-width: 100px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #ffc038;
+}
+.btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.page {
+  display: none;
+}
+
+.hints,
+.div-hints {
+  text-align: left;
+}
+
+#btn-validate {
+  margin-top: 8px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2.challenge {
+  margin-top: 200px;
+}
+
+h3.grand-total {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+table.scores-table {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 17px;
+}
+
+table.scores-table th,
+table.scores-table td {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.page.summary-page {
+  text-align: center;
+}
+
+.level-page {
+  text-align: center;
+}
