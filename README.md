@@ -2,4 +2,4 @@
 
 A simple html css and js app backed by cordova to run a simple kids app.
 
-![Demo App](https://imgur.com/J7g9lub)
+[img]https://i.imgur.com/s8Kn9kx.gif[/img]
